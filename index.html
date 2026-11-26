@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Discover Ethiopia</title>
+  <meta name="description" content="Your meal is more than food. A short, beautiful journey through Ethiopia's history, coffee ceremony, food, culture and landscapes.">
+  <meta name="theme-color" content="#1c120c">
+  <meta property="og:title" content="Discover Ethiopia">
+  <meta property="og:description" content="Every dish has a story. Every tradition has a history. Welcome to Ethiopia.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c120c'/%3E%3Cpath d='M32 10l6 16h16l-13 10 5 17-14-10-14 10 5-17-13-10h16z' fill='%23e0a83b'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://upload.wikimedia.org" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;600;700;800&family=Noto+Serif+Ethiopic:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ TOP BAR ============ -->
+<header class="topbar" id="topbar">
+  <a class="brand" href="#home" aria-label="Discover Ethiopia, back to top">
+    <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="none" stroke="#e0a83b" stroke-width="3"/><path d="M32 12l5 14h15l-12 9 5 15-13-9-13 9 5-15-12-9h15z" fill="#e0a83b"/></svg>
+    <span>DISCOVER ETHIOPIA</span>
+  </a>
+  <button class="menu-btn" id="menuBtn" aria-controls="drawer" aria-expanded="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+    Explore
+  </button>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-bg" data-close></div>
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Sections">
+    <div class="drawer-head">
+      <span class="eyebrow" style="margin:0">Your journey</span>
+      <button class="close" data-close aria-label="Close menu">&times;</button>
+    </div>
+    <nav id="drawerNav" aria-label="Sections">
+      <a href="#home"><span class="num">01</span>Home</a>
+      <a href="#dashen"><span class="num">02</span>Ras Dashen &amp; Simien</a>
+      <a href="#history"><span class="num">03</span>History</a>
+      <a href="#map"><span class="num">04</span>Explore the Map</a>
+      <a href="#coffee"><span class="num">05</span>Coffee Ceremony</a>
+      <a href="#food"><span class="num">06</span>Ethiopian Food</a>
+      <a href="#culture"><span class="num">07</span>Culture</a>
+      <a href="#festivals"><span class="num">08</span>Festivals: Genna, Timkat, Meskel</a>
+      <a href="#people"><span class="num">09</span>People &amp; Everyday Life</a>
+      <a href="#landscapes"><span class="num">10</span>Landscapes</a>
+      <a href="#quiz"><span class="num">11</span>Quiz</a>
+    </nav>
+    <div class="drawer-foot">Takes 3–10 minutes. Tap the <strong>Listen</strong> buttons to hear short stories.</div>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ============ HOME / HERO ============ -->
+<section class="hero" id="home" aria-labelledby="heroTitle">
+  <div class="media" data-img="hero" data-priority="high"></div>
+  <div class="hero-inner">
+    <p class="resto-name">Dashen Restaurant · Footscray</p>
+    <p class="welcome-amh" lang="am">እንኳን ደህና መጡ · Welcome</p>
+    <h1 id="heroTitle">DISCOVER <span class="line2">ETHIOPIA</span></h1>
+    <p class="subtitle">One country. Thousands of years of history. Extraordinary cultures. Unforgettable flavours.</p>
+    <p class="intro">Welcome to Ethiopia. From ancient kingdoms and extraordinary landscapes to the coffee ceremony and the warmth of its people, discover the stories behind one of Africa’s most fascinating countries.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="#begin">START YOUR JOURNEY
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-ghost" href="#dashen">Why “Dashen”?</a>
+    </div>
+    <p class="hero-caption">Pictured: the Simien Mountains, home of Ras Dashen</p>
+    <a class="scroll-cue" href="#begin" aria-label="Scroll to begin"><span class="mouse"></span>Scroll</a>
+  </div>
+</section>
+
+<div class="meal-banner" id="begin">
+  <p>Your meal is more than food. <em>It is a journey through Ethiopia.</em></p>
+</div>
+<div class="tibeb" aria-hidden="true"></div>
+
+<!-- ============ RAS DASHEN / SIMIEN (the restaurant's namesake) ============ -->
+<section class="section dashen" id="dashen" aria-labelledby="dashenTitle">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Our name · ስማችን</p>
+      <h2 id="dashenTitle">Ras Dashen, the roof of Ethiopia</h2>
+      <p class="amh-sub" lang="am">ራስ ዳሸን · የስሜን ተራሮች</p>
+      <p class="lede" id="dashenLede"></p>
+      <div id="dashenListen"></div>
+    </div>
+    <figure class="dashen-photo reveal">
+      <div class="media" data-img="dashen"></div>
+      <figcaption>Rock towers and giant lobelias in the Simien Mountains</figcaption>
+    </figure>
+    <div class="facts dashen-facts reveal" id="dashenFacts"></div>
+    <div class="dashen-body reveal" id="dashenBody"></div>
+    <figure class="dashen-photo wide reveal">
+      <div class="media" data-img="simien"></div>
+      <figcaption>Escarpments of Simien Mountains National Park</figcaption>
+    </figure>
+    <h3 class="dashen-h3 reveal">Found almost nowhere else</h3>
+    <div class="wild-grid" id="wildGrid"></div>
+    <p class="dashen-src" id="dashenSrc"></p>
+  </div>
+</section>
+
+<!-- ============ INTRO ============ -->
+<section class="section light" aria-labelledby="introTitle">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Before we begin</p>
+      <h2 id="introTitle">A land of highlands, kingdoms and coffee</h2>
+      <p class="lede">Ethiopia sits in the Horn of Africa. Its high plateau is split by the Great Rift Valley, and its story stretches back thousands of years — yet it is also young, fast-changing and home to more than 80 languages.</p>
+    </div>
+    <div class="facts reveal" id="facts"></div>
+    <div class="journey-grid" id="journeyGrid"></div>
+  </div>
+</section>
+
+<!-- ============ HISTORY ============ -->
+<section class="section" id="history" aria-labelledby="historyTitle">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">History · Interactive timeline</p>
+      <h2 id="historyTitle">Three thousand years in nine moments</h2>
+      <p class="amh-sub" lang="am">ታሪክ</p>
+      <p class="lede">Tap an era to travel through time. Each stop separates what historians know from what tradition tells.</p>
+    </div>
+    <div class="timeline-rail" id="eraRail" role="tablist" aria-label="Historical periods"></div>
+    <div class="era-progress" aria-hidden="true"><span id="eraProgress"></span></div>
+    <article class="era-card" id="eraCard" role="tabpanel" aria-live="polite"></article>
+    <details class="refs">
+      <summary>Sources for this timeline</summary>
+      <ol id="historyRefs"></ol>
+    </details>
+    <div class="next-link"><a href="#map"><span>Next stop</span><strong>Explore the map</strong><span class="arrow" aria-hidden="true">↓</span></a></div>
+  </div>
+</section>
+
+<!-- ============ MAP ============ -->
+<section class="section light" id="map" aria-labelledby="mapTitleH">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Explore the map</p>
+      <h2 id="mapTitleH">Tap a place to discover it</h2>
+      <p class="amh-sub" lang="am">ካርታ</p>
+      <p class="lede">From the castles of Gondar to the salt flats of the Danakil — ten places that tell Ethiopia’s story.</p>
+    </div>
+    <div class="map-layout">
+      <div>
+        <div class="map-shell reveal">
+          <div class="map-frame" id="mapFrame"></div>
+        </div>
+        <p class="map-note">Map drawn from Natural Earth data (public domain). Place markers are approximate and the map is for illustration only; it is not an authority on international boundaries.</p>
+      </div>
+      <div>
+        <h3 style="margin-top:22px">Places on the map</h3>
+        <div class="place-chips" id="placeChips"></div>
+      </div>
+    </div>
+    <div class="next-link"><a href="#coffee"><span>Next stop</span><strong>The coffee ceremony</strong><span class="arrow" aria-hidden="true">↓</span></a></div>
+  </div>
+</section>
+
+<div class="sheet" id="sheet" aria-hidden="true">
+  <div class="sheet-bg" data-close></div>
+  <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <button class="sheet-close" data-close aria-label="Close">&times;</button>
+    <div class="sheet-grab" aria-hidden="true"></div>
+    <div id="sheetContent"></div>
+  </div>
+</div>
+
+<!-- ============ COFFEE ============ -->
+<section class="section coffee" id="coffee" aria-labelledby="coffeeTitle">
+  <div class="wrap">
+    <div class="coffee-top">
+      <div class="section-head reveal">
+        <p class="eyebrow">The coffee ceremony</p>
+        <h2 id="coffeeTitle">Buna: coffee as a ceremony of welcome</h2>
+        <p class="amh-sub" lang="am">ቡና</p>
+        <p class="lede">Smell the incense? In many Ethiopian homes, coffee is not a quick drink. It is roasted, ground and brewed in front of guests — and shared slowly, over conversation.</p>
+        <button class="listen-btn" data-story="coffee"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5v14l12-7z"/></svg></span>Listen: the coffee ceremony</button>
+      </div>
+      <div class="coffee-hero reveal">
+        <div class="media" data-img="incense"></div>
+        <div class="smoke" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="ch-body"><p>The ceremony happening in this restaurant <em>is the same ritual</em> shared in homes across Ethiopia.</p></div>
+      </div>
+    </div>
+
+    <div class="audio-panel reveal" aria-labelledby="ambTitle">
+      <h4 id="ambTitle">Optional: set the mood</h4>
+      <p class="small">Nothing plays until you press play. Both sounds are original recordings made for this site.</p>
+      <div class="audio-rows">
+        <div class="audio-row">
+          <button class="toggle" id="ambToggle" aria-pressed="false" aria-label="Play ambient music">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5v14l12-7z"/></svg></button>
+          <span class="lbl">Gentle lyre ambience<small>Original piece in a pentatonic mode like tizita</small></span>
+          <input type="range" min="0" max="1" step="0.05" value="0.6" id="ambVol" aria-label="Ambient music volume">
+        </div>
+        <div class="audio-row">
+          <button class="toggle" id="roastToggle" aria-pressed="false" aria-label="Play roasting sound">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5v14l12-7z"/></svg></button>
+          <span class="lbl">Beans on the pan<small>A soft roasting crackle</small></span>
+          <input type="range" min="0" max="1" step="0.05" value="0.35" id="roastVol" aria-label="Roasting sound volume">
+        </div>
+      </div>
+      <audio id="ambAudio" src="assets/audio/coffee-ambience.mp3" preload="none" loop></audio>
+      <audio id="roastAudio" src="assets/audio/roasting-crackle.mp3" preload="none" loop></audio>
+    </div>
+
+    <h3 class="reveal" style="margin-top:38px">Six steps, from green bean to shared cup</h3>
+    <p class="small" style="color:var(--muted);margin:0">Swipe through the steps →</p>
+    <div class="steps" id="coffeeSteps"></div>
+
+    <h3 class="reveal" style="margin-top:30px">Three rounds</h3>
+    <div class="rounds" id="coffeeRounds"></div>
+
+    <h3 class="reveal">What the ceremony means</h3>
+    <div class="meaning reveal" id="coffeeMeaning"></div>
+    <p class="note-vary">Customs vary between regions, communities and households — names, snacks, the number of rounds and the role of incense can all differ. What follows is a common pattern, not a single rulebook.</p>
+
+    <div class="callout reveal">
+      <h4>At your table</h4>
+      <p id="coffeeTable"></p>
+    </div>
+    <div class="next-link"><a href="#food"><span>Next stop</span><strong>Ethiopian food</strong><span class="arrow" aria-hidden="true">↓</span></a></div>
+  </div>
+</section>
+
+<!-- ============ FOOD ============ -->
+<section class="section light" id="food" aria-labelledby="foodTitle">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Ethiopian food &amp; food culture</p>
+      <h2 id="foodTitle">One platter, many hands</h2>
+      <p class="amh-sub" lang="am">ምግብ</p>
+      <p class="lede">Ethiopian meals are usually shared from one large tray, with injera as both the plate and the spoon.</p>
+    </div>
+    <div class="feature reveal" id="teffFeature"></div>
+    <div class="feature reveal" id="injeraFeature"></div>
+    <h3 class="reveal">Dishes to know — tap one</h3>
+    <div class="dish-grid" id="dishGrid"></div>
+    <div class="info-cards" id="foodInfo"></div>
+    <div class="next-link"><a href="#culture"><span>Next stop</span><strong>Culture &amp; traditions</strong><span class="arrow" aria-hidden="true">↓</span></a></div>
+  </div>
+</section>
+
+<!-- ============ CULTURE ============ -->
+<section class="section mid" id="culture" aria-labelledby="cultureTitle">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Culture &amp; traditions</p>
+      <h2 id="cultureTitle">Not one culture, but many</h2>
+      <p class="amh-sub" lang="am">ባህል</p>
+      <p class="lede">Ethiopia is home to dozens of peoples, faiths and languages. Here are some traditions you may hear about — each lived differently from place to place.</p>
+      <button class="listen-btn" data-story="hospitality"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5v14l12-7z"/></svg></span>Listen: Ethiopian hospitality</button>
+    </div>
+    <div class="culture-grid" id="cultureGrid"></div>
+    <div class="fest" id="festivals">
+      <h3 class="fest-h reveal">Three great festivals</h3>
+      <p class="fest-sub reveal">Christmas, Epiphany and the Finding of the True Cross: celebrated with candles, processions and fire. Tap a festival to see it.</p>
+      <div class="fest-tabs" role="tablist" aria-label="Festivals" id="festTabs"></div>
+      <div class="fest-panel" id="festPanel" role="tabpanel"></div>
+    </div>
+    <div class="next-link"><a href="#people"><span>Next stop</span><strong>People &amp; everyday life</strong><span class="arrow" aria-hidden="true">↓</span></a></div>
+  </div>
+</section>
+
+<!-- ============ PEOPLE ============ -->
+<section class="section light" id="people" aria-labelledby="peopleTitle">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">People &amp; everyday life</p>
+      <h2 id="peopleTitle">A rich past, a young present</h2>
+      <p class="amh-sub" lang="am">ሕዝብ</p>
+      <p class="lede">Farmers and city founders, traders and tech students, grandparents and teenagers — swipe through a few everyday stories.</p>
+    </div>
+    <div class="stories" id="stories"></div>
+    <p class="balance-note">Ethiopia has faced real hardships, including drought and conflict. But that is never the whole story: it is also a country of fast-growing cities, deep traditions, creative young people and enormous ambition.</p>
+    <div class="next-link"><a href="#landscapes"><span>Next stop</span><strong>Landscapes</strong><span class="arrow" aria-hidden="true">↓</span></a></div>
+  </div>
+</section>
+
+<!-- ============ LANDSCAPES ============ -->
+<section class="section" id="landscapes" aria-labelledby="landTitle">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Landscapes &amp; destinations</p>
+      <h2 id="landTitle">From 4,500 metres to below sea level</h2>
+      <p class="amh-sub" lang="am">መልክዓ ምድር</p>
+      <p class="lede">Few countries pack so many worlds into one map. Scroll on — and start planning a trip.</p>
+      <button class="listen-btn" data-story="landscapes"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5v14l12-7z"/></svg></span>Listen: Ethiopian landscapes</button>
+    </div>
+    <div class="scapes" id="scapes"></div>
+    <div class="next-link"><a href="#quiz"><span>Final stop</span><strong>Test yourself</strong><span class="arrow" aria-hidden="true">↓</span></a></div>
+  </div>
+</section>
+
+<!-- ============ QUIZ ============ -->
+<section class="section light" id="quiz" aria-labelledby="quizTitle">
+  <div class="wrap">
+    <div class="section-head reveal" style="text-align:center">
+      <p class="eyebrow">Quiz</p>
+      <h2 id="quizTitle">How much Ethiopia did you discover?</h2>
+      <p class="lede" style="margin-left:auto;margin-right:auto">Seven quick questions. No pressure — every answer comes with a story.</p>
+    </div>
+    <div class="quiz-card" id="quizCard" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="finale" aria-label="Closing message">
+  <div class="wrap">
+    <span class="amh" lang="am">እንኳን ደህና መጡ</span>
+    <p class="big">Every dish has a story. Every tradition has a history. <em>Welcome to Ethiopia.</em></p>
+    <a class="btn btn-gold" href="#home">Back to the start</a>
+  </div>
+</section>
+</main>
+
+<footer id="credits">
+  <div class="tibeb thin" aria-hidden="true" style="margin-bottom:30px"></div>
+  <div class="wrap">
+    <h3>Photo &amp; sound credits</h3>
+    <p>Photographs are from Wikimedia Commons and are used under the licences shown. Tap any credit to see the original file and its licence. The ambient music and roasting sound are original works made for this site. Narration uses your device’s built-in voice.</p>
+    <ul class="credits-list" id="creditsList"></ul>
+    <h4>About this experience</h4>
+    <p>Historical content draws on UNESCO, Encyclopaedia Britannica and other published sources listed in the History section. Where a story comes from tradition or legend rather than historical evidence, we say so.</p>
+    <p class="footer-note">Discover Ethiopia · A cultural companion for our guests in Footscray, Melbourne.</p>
+  </div>
+</footer>
+
+<!-- Narration player -->
+<div class="narrator" id="narrator" role="region" aria-label="Audio story player">
+  <div class="info"><small>Now telling</small><strong id="narrTitle">—</strong><div class="bar"><span id="narrBar"></span></div></div>
+  <button class="ctl" id="narrReplay" aria-label="Replay from the beginning"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 12a8 8 0 1 0 3-6.2"/><path d="M4 4v5h5"/></svg></button>
+  <button class="ctl main" id="narrPlay" aria-label="Pause"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+  <button class="ctl" id="narrStop" aria-label="Stop"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/></svg></button>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="js/media.js"></script>
+<script src="js/local-ready.js"></script>
+<script src="js/map-data.js"></script>
+<script src="js/content.en.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
