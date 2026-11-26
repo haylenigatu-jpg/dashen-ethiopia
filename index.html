@@ -733,6 +733,8 @@ body.app .narrator { transform: translateY(calc(100% + var(--tab-h) + 40px)); vi
 body.app .narrator.show { transform: none; visibility: visible; transition: transform .35s cubic-bezier(.2,.8,.2,1), visibility 0s; }
 .stamp-pop { top: calc(var(--nav-h) + 10px); bottom: auto; transform: translate(-50%, -30px); white-space: nowrap; }
 .stamp-pop.show { transform: translate(-50%, 0); }
+body:not(.app) .hero-coffee .hero-inner { min-height: 100svh; }
+@media (min-width: 700px) and (min-height: 700px) { body:not(.app) .hero-coffee .intro { display: block; } }
 
 </style>
 </head>
@@ -793,7 +795,7 @@ body.app .narrator.show { transform: none; visibility: visible; transition: tran
       <div class="cta-row">
         <a class="btn btn-gold" href="#begin">START YOUR JOURNEY
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-ghost" href="#coffee">Make coffee</a>
+        <a class="btn btn-ghost" href="#coffee">Coffee ceremony</a>
       </div>
       <p class="hero-caption">Pictured: a jebena and cups set for the coffee ceremony</p>
     </div>
@@ -2962,11 +2964,15 @@ window.CONTENT = {
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   var esc = DE.esc || function (s) { return String(s); };
   var RM = !!DE.reduceMotion;
+  // Features switched on. The app-style layout (tabs, passport, carousels, simulator, map game)
+  // is kept in the code but turned off: the site stays one scrolling page.
+  var ON = { shell: false, passport: false, swipe: false, sim: false, game: false };
   var store = {
     get: function (k, d) { try { var v = localStorage.getItem("de_" + k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
     set: function (k, v) { try { localStorage.setItem("de_" + k, JSON.stringify(v)); } catch (e) {} }
   };
 
+  if (ON.shell) {
   /* ================================================================ views */
   var main = $("#main");
   var VIEW_OF = { home: "home", begin: "home", dashen: "home", history: "history", map: "map", coffee: "coffee", food: "food",
@@ -3034,6 +3040,9 @@ window.CONTENT = {
   // "Next stop" links now move sideways to another screen
   $$(".next-link .arrow").forEach(function (a) { a.textContent = "→"; });
 
+  }
+
+  if (ON.passport) {
   /* ================================================================ passport */
   var STAMPS = [
     { id: "dashen", view: "home", label: "Ras Dashen", am: "ዳሸን", href: "#dashen" },
@@ -3104,6 +3113,9 @@ window.CONTENT = {
     pa.addEventListener("click", function (e) { e.preventDefault(); setTimeout(openPassport, 280); });
   }
 
+  }
+
+  if (ON.swipe) {
   /* ================================================================ swipe rows */
   // stack-heavy lists become sideways carousels on phones
   function wrapPair(a, b, cls) {
@@ -3125,6 +3137,8 @@ window.CONTENT = {
     row.addEventListener("scroll", function () { requestAnimationFrame(upd); }, { passive: true });
     upd();
   });
+
+  }
 
   /* ================================================================ fidel */
   (function fidel() {
@@ -3179,9 +3193,11 @@ window.CONTENT = {
     layout(); window.addEventListener("resize", layout);
     if (RM) { for (var i = 0; i < 60; i++) { spawn(); } parts.forEach(function (p, i) { p.life = i * 3; p.y -= i * 1.6; }); running = true; frame(); running = false; return; }
     document.addEventListener("de:view", function (e) { var on = e.detail === "home"; if (on && !running) { running = true; frame(); } else if (!on) running = false; });
+    if ("IntersectionObserver" in window) new IntersectionObserver(function (es) { var on = es[0].isIntersecting; if (on && !running) { running = true; frame(); } else if (!on) running = false; }).observe(hero);
     frame();
   })();
 
+  if (ON.sim) {
   /* ================================================================ coffee simulator */
   (function buna() {
     var host = $(".coffee-top"); if (!host) return;
@@ -3307,6 +3323,9 @@ window.CONTENT = {
     render();
   })();
 
+  }
+
+  if (ON.game) {
   /* ================================================================ map game */
   (function game() {
     var frame = $("#mapFrame"), layout = $(".map-layout"); if (!frame || !layout || !C.places) return;
@@ -3361,8 +3380,10 @@ window.CONTENT = {
     frame.addEventListener("keydown", intercept, true);
   })();
 
+  }
+
   /* ================================================================ start */
-  route();
+  if (ON.shell) route();
 })();
 
 </script>
